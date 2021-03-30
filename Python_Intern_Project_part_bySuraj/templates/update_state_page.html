@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE STATE DATA :<br>
+    <form action="http://127.0.0.1:5000/state_updation_process/{{key_state_id}}" method="POST" id="update">
+
+        <label for="state_name">State Name : </label>
+        <input type="text" name="state_name" id="state_name" value = "{{state_name}}"><br>
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_state_id">Back</button>
+    </form>
+
+</body>
+</html>

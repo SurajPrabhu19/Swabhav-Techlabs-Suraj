@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Contact</td>
+  </tr>
+  {% for item in data %}
+  <tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td><form><button formaction="http://127.0.0.1:5000/address_details/{{item[2]}}">Address Details</button></form></td>
+
+  </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

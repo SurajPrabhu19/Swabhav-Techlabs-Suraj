@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE COUNTRY DATA :<br>
+    <form action="http://127.0.0.1:5000/country_updation_process/{{key_country_id}}" method="POST" id="update">
+
+        <label for="country_name">Country Name : </label>
+        <input type="text" name="country_name" id="country_name" value = "{{country_name}}"><br>
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_country_id">Back</button>
+    </form>
+
+</body>
+</html>

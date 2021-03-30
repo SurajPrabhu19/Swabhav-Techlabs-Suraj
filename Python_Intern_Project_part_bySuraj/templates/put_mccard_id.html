@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To update Stall table data, enter the Stall Id :
+<form action="http://127.0.0.1:5000/extract_mccardId_from_request" method="post" id="update_mccard">
+    <label for="mccard_id">Mega Consumer Card Id : </label><br>
+    <input type="text" id="mccard_id" name="mccard_id"><br>
+</form>
+
+<form>
+<button type="submit" form="update_mccard" value="Submit">Submit</button>
+<button formaction="http://127.0.0.1:5000/options">Back</button>
+</form>
+
+<br>(MEGA CONSUMER CARD TABLE FOR REFERENCE)
+
+<table>
+<!--| card_id | spend_amt | spend_date | payment_mode | event_id | booking_id | visitor_id    <tr>-->
+        <td>Card Id</td>
+        <td>Spent Amount</td>
+        <td>Spent Date</td>
+        <td>Payment Mode</td>
+        <td>Event Id</td>
+        <td>Booking Id</td>
+        <td>Visitor Id</td>
+  </tr>
+
+  {% for item in mccard_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+</body>
+</html>

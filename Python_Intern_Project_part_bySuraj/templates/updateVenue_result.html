@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{message}}<br>
+<table>
+<!--| venue_id | venue_city | venue_addr | country_id | state_id  <tr>-->
+        <td>Venue Id</td>
+        <td>Venue City</td>
+        <td>Venue Address</td>
+        <td>Country Id</td>
+        <td>State Id</td>
+  </tr>
+
+  {% for item in venue_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+</body>
+</html>

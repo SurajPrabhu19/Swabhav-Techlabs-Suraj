@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To update data of Venue enter the Venue Id :
+<form action="http://127.0.0.1:5000/pass_venue_id" method="post" id="update_venue">
+    <label for="venue_id">Venue id : </label><br>
+    <input type="text" id="venue_id" name="venue_id"><br>
+</form>
+
+<form>
+<button type="submit" form="update_venue" value="Submit">Submit</button>
+<button formaction="http://127.0.0.1:5000/options">Back</button>
+</form>
+<table>
+<!--| venue_id | venue_city | venue_addr | country_id | state_id  <tr>-->
+        <td>Venue Id</td>
+        <td>Venue City</td>
+        <td>Venue Address</td>
+        <td>Country Id</td>
+        <td>State Id</td>
+  </tr>
+
+  {% for item in venue_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+</body>
+</html>

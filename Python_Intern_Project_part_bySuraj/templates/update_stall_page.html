@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE VENUE DATA :<br>
+    <form action="http://127.0.0.1:5000/stall_updation_process/{{key_stall_id}}" method="POST" id="update">
+<!--        {{fname}}/{{lname}}/{{addr}}/{{pin_code}}/{{mob_no}}/{{email_id}}/{{date_time}}/{{gender}}-->
+        <label for="stall_no">Enter Stall Number : </label>
+        <input type="text" name="stall_no" id="stall_no" value={{stall_no}}><br>
+
+        <label for="stall_size">Enter Stall Size : </label>
+        <input type="text" name="stall_size" id="stall_size" value = {{stall_size}}><br>
+
+
+        <label for="stall_price">Enter Stall Price : </label>
+        <input type="text" name="stall_price" id="stall_price" value = {{stall_price}}><br>
+
+        <label for="is_booked">Is Booked : </label>
+        <input type="text" name="is_booked" id="is_booked" value = {{is_booked}}><br>
+
+        <label for="event_id">Enter Event Id : </label>
+        <input type="text" name="event_id" id="event_id" value = {{event_id}}><br>
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_stall_id">Back</button>
+    </form>
+<br>
+(EVENT TABLE FOR REFERENCE)<br><br>
+<table>
+    <!--        event_name | booking_start_date | event_start_date | event_end_date | venue_id |-->
+<!--            | venue_id | venue_city | venue_addr | country_id | state_id |-->
+
+  <tr>
+        <td>Event Id</td>
+        <td>Event Name</td>
+        <td>Booking Start Date</td>
+        <td>Event Start Date</td>
+        <td>Event End Date</td>
+        <td>Event Id</td>
+  </tr>
+
+  {% for item in event_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+</body>
+</html>

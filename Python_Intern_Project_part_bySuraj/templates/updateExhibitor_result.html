@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{message}}<br>
+  <table>
+<!--exhibitor_name, email_id, phone_no, company_name,company_description,-->
+<!-- company_address, company_pin_code, industry_id, country_id, state_id-->
+      <tr>
+            <td>Exhibitor Id</td>
+            <td>Email Id</td>
+            <td>Contact Number</td>
+            <td>Company Name</td>
+            <td>Company Description</td>
+            <td>Company Address</td>
+            <td>Company Pin Code</td>
+            <td>Industry Id</td>
+            <td>Country Id</td>
+            <td>State Id</td>
+      </tr>
+  {% for item in exhibitor_table %}
+      <tr>
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+            <td>{{item[2]}}</td>
+            <td>{{item[3]}}</td>
+            <td>{{item[4]}}</td>
+            <td>{{item[5]}}</td>
+            <td>{{item[6]}}</td>
+            <td>{{item[7]}}</td>
+            <td>{{item[8]}}</td>
+            <td>{{item[9]}}</td>
+            <td>{{item[10]}}</td>
+      </tr>
+{% endfor %}
+</table><br>
+</body>
+</html>

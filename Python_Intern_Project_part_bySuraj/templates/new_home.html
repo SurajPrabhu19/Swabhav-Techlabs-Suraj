@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Welcome to Update Home Page!!<br>
+    <form>
+        <button formaction="http://127.0.0.1:5000/choose_id_or_num">Update Contacts</button><br>
+    </form>
+   <table>
+  <tr>
+      <td>Id</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>addr</td>
+      <td>pin_code</td>
+      <td>mob_no</td>
+      <td>email_id</td>
+      <td>date_of_birth</td>
+      <td>gender</td>
+  </tr>
+  {% for item in data %}
+  <tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+      <td>{{item[3]}}</td>
+      <td>{{item[4]}}</td>
+      <td>{{item[5]}}</td>
+      <td>{{item[6]}}</td>
+      <td>{{item[7]}}</td>
+      <td>{{item[8]}}</td>
+
+  </tr>
+{% endfor %}
+</table><br>
+
+    <form>
+        <button formaction="http://127.0.0.1:5000/new_visitor">Insert visitor</button><br>
+    </form>
+</body>
+</html>

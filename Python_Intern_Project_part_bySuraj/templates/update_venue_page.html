@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE VENUE DATA :<br>
+    <form action="http://127.0.0.1:5000/venue_updation_process/{{key_venue_id}}" method="POST" id="update">
+<!--        {{fname}}/{{lname}}/{{addr}}/{{pin_code}}/{{mob_no}}/{{email_id}}/{{date_time}}/{{gender}}-->
+
+        <label for="venue_city">Enter venue_city : </label>
+        <input type="text" name="venue_city" id="venue_city" value={{venue_city}}><br>
+
+        <label for="venue_addr">Enter venue_addr : </label>
+        <input type="text" name="venue_addr" id=venue_addr value = {{venue_addr}}><br>
+
+        <label for="country_id">Enter country_id : </label>
+        <input type="text" name="country_id" id="country_id" value = {{country_id}}><br>
+
+        <label for="state_id">Enter state_id : </label>
+        <input type="text" name="state_id" id="state_id" value = {{state_id}}><br>
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_venue_id">Back</button>
+    </form>
+<br>
+(STATE_COUNTRY TABLE FOR REFERENCE)<br><br>
+<table>
+  <tr>
+        <td>Country Id</td>
+        <td>Country Name</td>
+  </tr>
+
+  {% for item in country_table %}
+  <tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+<table>
+  <tr>
+         <td>State ID</td>
+        <td>State Name</td>
+  </tr>
+
+  {% for item in state_table %}
+  <tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+
+  </tr>
+  {% endfor %}
+</table><br>
+
+
+</body>
+</html>

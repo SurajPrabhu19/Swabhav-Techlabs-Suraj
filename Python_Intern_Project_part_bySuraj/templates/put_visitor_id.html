@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To update Visitor table data, enter the Visitor Id :
+<form action="http://127.0.0.1:5000/extract_visitorId_from_request" method="post" id="choice">
+    <label for="visitor_id">Visitor id : </label><br>
+    <input type="text" id="visitor_id" name="visitor_id"><br>
+</form>
+
+<form>
+<button type="submit" form="choice" value="Submit">Submit</button>
+<button formaction="http://127.0.0.1:5000/options">Back</button>
+
+    <table>
+  <tr>
+        <td>Visitor Id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>addr</td>
+        <td>pin_code</td>
+        <td>mob_no</td>
+        <td>email_id</td>
+        <td>date_of_birth</td>
+        <td>gender</td>
+  </tr>
+
+  {% for item in visitor_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>
+        <td>{{item[7]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+</form>
+</body>
+</html>

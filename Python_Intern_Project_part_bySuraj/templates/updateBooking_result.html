@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{message}}<br>
+<table>
+<!--    | booking_id | booking_date | total_amount | event_id | exhibitor_id -->
+    <tr>
+        <td>Booking Id</td>
+        <td>Booking Date</td>
+        <td>Total Amount</td>
+        <td>Event Id</td>
+        <td>Exhibitor Id</td>
+  </tr>
+
+  {% for item in booking_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+</body>
+</html>

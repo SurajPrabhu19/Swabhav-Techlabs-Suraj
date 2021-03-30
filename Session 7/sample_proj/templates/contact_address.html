@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Number</td>
+        <td>Address</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Postal_code</td>
+        <td>Id</td>
+  </tr>
+  {% for item in data %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>
+        <td>{{item[7]}}</td>
+  </tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

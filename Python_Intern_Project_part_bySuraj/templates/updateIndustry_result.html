@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{message}}<br>
+
+<table>
+    <tr>
+        <td>IndustryId</td>
+        <td>Industry Name</td>
+  </tr>
+
+  {% for item in industry_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+</body>
+</html>

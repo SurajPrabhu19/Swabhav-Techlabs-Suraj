@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE VISITOR DATA :<br>
+
+    <form action="http://127.0.0.1:5000/visitor_updation_process/{{key_visitor_id}}" method="POST" id="update">
+<!--        {{fname}}/{{lname}}/{{addr}}/{{pin_code}}/{{mob_no}}/{{email_id}}/{{date_time}}/{{gender}}-->
+        <label for="fname">Enter First Name : </label>
+        <input type="text" name="fname" id="fname" value="{{fname}}"><br>
+
+        <label for="lname">Enter Last Name : </label>
+        <input type="text" name="lname" id=lname value = "{{lname}}"><br>
+
+        <label for="addr">Address : </label>
+        <input type="text" name="addr" id="addr" value = "{{addr}}"><br>
+
+        <label for="pin_code">Pin Code : </label>
+        <input type="text" name="pin_code" id="pin_code" value = "{{pin_code}}"><br>
+
+        <label for="mob_no">Mobile No. : </label>
+        <input type="text" name="mob_no" id="mob_no" value = "{{mob_no}}"><br>
+
+        <label for="email_id">Email Id : </label>
+        <input type="text" name="email_id" id="email_id" value = "{{email_id}}"><br>
+
+        <label for="date_time">Date and Time : </label>
+        <input type="text" name="date_time" id="date_time" value = {{date_time}}><br>
+
+        <label for="gender">Gender : </label>
+        <input type="text" name="gender" id="gender" value ="{{gender}}"><br>
+
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_visitor_id">Back</button>
+    </form>
+</body>

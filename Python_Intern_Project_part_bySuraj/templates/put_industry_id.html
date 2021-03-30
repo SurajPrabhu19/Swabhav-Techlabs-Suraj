@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To update Industry table data, enter the Industry Id :
+<form action="http://127.0.0.1:5000/extract_industryId_from_request" method="post" id="update_industry">
+    <label for="industry_id">Industry Id : </label><br>
+    <input type="text" id="industry_id" name="industry_id"><br>
+</form>
+
+<form>
+<button type="submit" form="update_industry" value="Submit">Submit</button>
+<button formaction="http://127.0.0.1:5000/options">Back</button>
+</form>
+
+<br>(INDUSTRY TABLE FOR REFERENCE)
+
+<table>
+    <tr>
+        <td>IndustryId</td>
+        <td>Industry Name</td>
+  </tr>
+
+  {% for item in industry_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+</body>
+</html>

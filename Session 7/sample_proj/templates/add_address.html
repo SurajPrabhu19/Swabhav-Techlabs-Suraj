@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:5000/pass_add_address_data" method="POST" id="addr_1">
+        <label for="id">Enter Id : </label>
+        <input type="text" name="id" id="id"><br>
+
+        <label for="number">Enter Number : </label>
+        <input type="text" name="number" id="number"><br>
+
+        <label for="addr">Address : </label>
+        <input type="text" name="addr" id="addr"><br>
+
+        <label for="city">City : </label>
+        <input type="text" name="city" id="city"><br>
+
+        <label for="state">State : </label>
+        <input type="text" name="state" id="state"><br>
+
+        <label for="p_code">Postal Code : </label>
+        <input type="text" name="p_code" id="p_code"><br>
+    </form>
+    <form>
+        <button type="submit" form="addr_1" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/home">Back</button>
+    </form>
+</body>
+</html>

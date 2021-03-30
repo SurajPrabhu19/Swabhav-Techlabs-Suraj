@@ -1,0 +1,26 @@
+add a commit pyc files
+made a git ignore file after wards
+
+if it does not works then hwo to make it work?
+
+-------------
+git ignmore.io
+python 
+pycajtrm
+flask
+copy all content in .gitigbore file
+tehhen add and commit ther fiewl
+
+--------------
+find the relation ship between city,country,language
+database world
+19.38
+cretate database
+swabhav
+query  -> employee table , department table, create foriegn key
+store in session 4
+
+
+creat repo of swabhav
+shud contian all code
+send the url to sir

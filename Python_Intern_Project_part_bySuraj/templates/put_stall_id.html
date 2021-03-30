@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To update Stall table data, enter the Stall Id :
+<form action="http://127.0.0.1:5000/extract_stallId_from_request" method="post" id="update_stall">
+    <label for="stall_id">Stall id : </label><br>
+    <input type="text" id="stall_id" name="stall_id"><br>
+</form>
+
+<form>
+<button type="submit" form="update_stall" value="Submit">Submit</button>
+<button formaction="http://127.0.0.1:5000/options">Back</button>
+</form>
+
+<br>(STALL TABLE FOR REFERENCE)
+
+<table>
+<!--    | stall_id | stall_no | stall_price | stall_size | is_booked | event_id |  -->
+    <tr>
+        <td>Stall Id</td>
+        <td>Stall Number</td>
+        <td>Stall Price</td>
+        <td>Stall Size</td>
+        <td>Is Booked</td>
+        <td>Event Id</td>
+
+  </tr>
+
+  {% for item in stall_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE INDUSTRY DATA :<br>
+    <form action="http://127.0.0.1:5000/industry_updation_process/{{key_industry_id}}" method="POST" id="update">
+
+        <label for="industry_name">Industry Name : </label>
+        <input type="text" name="industry_name" id="industry_name" value = {{industry_name}}><br>
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_industry_id">Back</button>
+    </form>
+
+</body>
+</html>

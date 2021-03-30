@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+UPDATE BOOKING DATA :<br>
+    <form action="http://127.0.0.1:5000/booking_updation_process/{{key_booking_id}}" method="POST" id="update">
+
+
+        <label for="booking_date">Booking Date : </label>
+        <input type="text" name="booking_date" id="booking_date" value = {{booking_date}}><br>
+
+        <label for="total_amount">Total Amount : </label>
+        <input type="text" name="total_amount" id="total_amount" value = {{total_amount}}><br>
+
+        <label for="event_id">Event Id : </label>
+        <input type="text" name="event_id" id="event_id" value = {{event_id}}><br>
+
+        <label for="exhibitor_id">Exhibitor Id : </label>
+        <input type="text" name="exhibitor_id" id="exhibitor_id" value = {{exhibitor_id}}><br>
+
+    </form>
+    <form>
+        <button type="submit" form="update" value="Submit">Submit</button>
+        <button formaction="http://127.0.0.1:5000/put_booking_id">Back</button>
+    </form>
+<br>(EXHIBITOR TABLE FOR REFERENCE)
+
+<table>
+<!-- exhibitor_id | exhibitor_name | email_id | phone_no   | company_name | company_description | company_addr |
+ company_pin_code | industry_id | country_id | state_id-->
+    <tr>
+        <td>Exhibitor Id</td>
+        <td>Exhibitor Name</td>
+        <td>Email Id</td>
+        <td>Contact Number</td>
+        <td>Company Name</td>
+        <td>Company Description</td>
+        <td>Company Address</td>
+        <td>Company Pin Code</td>
+        <td>Industry Id</td>
+        <td>Country Id</td>
+        <td>State Id</td>
+  </tr>
+
+  {% for item in exhibitor_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+        <td>{{item[5]}}</td>
+        <td>{{item[6]}}</td>
+        <td>{{item[7]}}</td>
+        <td>{{item[8]}}</td>
+        <td>{{item[9]}}</td>
+        <td>{{item[10]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+(EVENT TABLE FOR REFERENCE)
+<table>
+    <!--        event_name | booking_start_date | event_start_date | event_end_date | venue_id |-->
+  <tr>
+        <td>Event Id</td>
+        <td>Event Name</td>
+        <td>Booking Start Date</td>
+        <td>Event End Date</td>
+        <td>Venue Id</td>
+  </tr>
+
+  {% for item in event_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+        <td>{{item[2]}}</td>
+        <td>{{item[3]}}</td>
+        <td>{{item[4]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+</body>
+</html>

@@ -1,0 +1,25 @@
+git remote add origin https://github.com/SurajPrabhu19/S4_repo
+
+Git Exercise #01
+1- Initialize a new repository. Add two files in your working directory. 
+ 2- View the status of the working directory and the staging area.
+ 3- Stage both files.  
+4- View the changes in the staging area.  
+5- Create a commit.
+ 6- View the list of commits. 
+ 7- View the content of the last commit. 
+ 8- Update one of the files. View the changes in the working directory.
+ 9- Stage the changes. 
+ 10- Unstage the file.---------------------------------------------doubt----------------------------
+
+Kannan Sudhakaran, [04.02.21 15:13]
+Git Exercise #02
+- Make another commit , assuming you already have one commit(add a file1.txt). Now you should have two commits in your repo. 
+- Show the changes in the last 2 commits.  
+- Show all commits made by yourself. Use the one-liner option. 
+- Show all commits with changes to file1.txt. Include the number of lines added/removed.
+-------------------------------------1 file changed, 2 insertions(+), 1 deletion(-)
+- Compare the last two commits.  
+- Check out the commit before the last commit. Note the detached HEAD in the terminal. Check out the master branch.
+- Create a tag (v1.0) for the last commit. Show the history using the one-liner option and note the tag you just created. 
+-Delete the tag.

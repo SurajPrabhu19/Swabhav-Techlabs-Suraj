@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To update Country table data, enter the Country Id :
+<form action="http://127.0.0.1:5000/extract_countryId_from_request" method="post" id="update_country">
+    <label for="country_id">Industry Id : </label><br>
+    <input type="text" id="country_id" name="country_id"><br>
+</form>
+
+<form>
+<button type="submit" form="update_country" value="Submit">Submit</button>
+<button formaction="http://127.0.0.1:5000/options">Back</button>
+</form>
+
+<br>(COUNTRY TABLE FOR REFERENCE)
+
+<table>
+    <tr>
+        <td>Country Id</td>
+        <td>Country Name</td>
+  </tr>
+
+  {% for item in country_table %}
+  <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+</body>
+</html>
